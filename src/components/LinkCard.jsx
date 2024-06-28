@@ -38,7 +38,7 @@ const LinkCard = ({url,fetchUrl}) => {
         <div className='flex'>
           
             <Button varinat="ghost" onClick={()=>{
-                navigator.clipboard.writeText(`${Host_Name}/${url?.short_url}`)
+                navigator.clipboard.writeText(`${Host_Name}/${url?.custom_url?url?.custom_url:url?.short_url}`)
             }}>
                 <Copy/>
             </Button>

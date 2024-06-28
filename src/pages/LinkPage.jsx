@@ -33,7 +33,7 @@ const LinkPage = () => {
     user_id:user?.id
   })
   console.log("data",url);
-  const {data:dataStats,loading:loadingStats,error:errorStats,fn:fetchStats}=useFetch(getClicksForUrls,10);
+  const {data:dataStats,loading:loadingStats,error:errorStats,fn:fetchStats}=useFetch(getClicksForUrls,id);
   const {loading:loadingDelete,fn:deleteFn}=useFetch(deleteUrl,id);
   console.log("DataS",dataStats);
   
@@ -77,7 +77,7 @@ const deleteClick=async()=>{
           <span className='text-1xl sm:text-2xl font-extralight'>{new Date(url?.created_at).toLocaleString()}</span>
           <div className='flex gap-1'>
           <Button varinat="ghost" onClick={()=>{
-                navigator.clipboard.writeText(`http://localhost:5173/${link}`)
+                navigator.clipboard.writeText(`${Host_Name}/${link}`)
             }}>
                 <Copy/>
             </Button>
