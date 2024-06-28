@@ -26,7 +26,7 @@ const Auth = () => {
         {
             searchParams.get('createNew')?<h1 className='text-3xl font-extrabold'>Hold Up Login first</h1>:<h1 className='text-3xl font-extrabold'>Login/SignUp</h1>
         }
-    <Tabs defaultValue="login" className="w-[600px] mt-2">
+    <Tabs defaultValue="login" className="w-[400px] mt-2">
   <TabsList className="grid w-full grid-cols-2">
     <TabsTrigger value="login">Login</TabsTrigger>
     <TabsTrigger value="SignUp">SignUp</TabsTrigger>
