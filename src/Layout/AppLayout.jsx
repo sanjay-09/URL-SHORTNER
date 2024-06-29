@@ -16,7 +16,7 @@ const AppLayout = () => {
 
      </main>
      <div className='p-10 text-center bg-gray-800 mt-10'>
-        Made With by Sanjay Singh
+        Made With Love by Sanjay Singh
      </div>
 
 

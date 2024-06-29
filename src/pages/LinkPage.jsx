@@ -1,6 +1,6 @@
 import useFetch from '@/Hooks/useFetch';
 import { urlState } from '@/context';
-import { getClicksForUrls } from '@/db/apiClicks';
+import { getClicksForUrls, getClicksForUrls2 } from '@/db/apiClicks';
 import { deleteUrl, getLongUrls, getUrl } from '@/db/apiUrls';
 import { LinkIcon } from 'lucide-react';
 import React, { useEffect } from 'react'
@@ -33,7 +33,7 @@ const LinkPage = () => {
     user_id:user?.id
   })
   console.log("data",url);
-  const {data:dataStats,loading:loadingStats,error:errorStats,fn:fetchStats}=useFetch(getClicksForUrls,id);
+  const {data:dataStats,loading:loadingStats,error:errorStats,fn:fetchStats}=useFetch(getClicksForUrls2,id);
   const {loading:loadingDelete,fn:deleteFn}=useFetch(deleteUrl,id);
   console.log("DataS",dataStats);
   
